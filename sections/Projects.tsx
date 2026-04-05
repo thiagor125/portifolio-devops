@@ -1,43 +1,86 @@
 "use client";
 
-import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section id="projetos" className="mb-24">
-      <h2 className="text-3xl font-bold mb-10 text-white flex items-center gap-2">
-        <span className="text-blue-500">#</span> Projetos e Cases Técnicos
-      </h2>
+    <section id="projetos" className="mb-32">
+      <h2 className="text-3xl mb-8">Projetos e Cases Técnicos</h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((p, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="bg-[#0b1120] p-8 rounded-2xl border border-slate-800 hover:border-blue-500/40 shadow-lg transition-all flex flex-col justify-between"
-          >
-            <div>
-              <h3 className="text-2xl font-bold mb-3 text-white">{p.title}</h3>
-              <p className="text-blue-400/90 text-sm mb-5 font-medium">{p.description}</p>
+      <div className="grid md:grid-cols-2 gap-6">
 
-              <ul className="space-y-2 mb-6">
-                {p.details.map((d, index) => (
-                  <li key={index} className="text-slate-400 text-sm flex gap-2">
-                    <span className="text-blue-500">▹</span> {d}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="pt-4 border-t border-slate-800/50 flex gap-3 italic text-xs text-slate-500">
-              <span>#DevOps</span> <span>#SRE</span> <span>#Infrastructure</span>
-            </div>
-          </motion.div>
-        ))}
+        {/* PROJETO 1 */}
+        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3 className="text-xl font-bold mb-2">
+            Migração de Cluster (OpenShift Banking)
+          </h3>
+
+          <ul className="text-gray-400 text-sm space-y-2">
+            <li>▹ Migração de Deployments, Services e Secrets</li>
+            <li>▹ Gestão de volumes persistentes (PVs)</li>
+            <li>▹ Estratégia de Cutover com monitoramento</li>
+            <li>▹ Compliance e segurança bancária</li>
+          </ul>
+
+          <div className="mt-4 text-xs text-blue-400">
+            #DevOps #SRE #Infrastructure
+          </div>
+        </motion.div>
+
+        {/* PROJETO 2 */}
+        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3 className="text-xl font-bold mb-2">
+            Modernização Kong API Gateway
+          </h3>
+
+          <ul className="text-gray-400 text-sm space-y-2">
+            <li>▹ Interface para Services e Routes</li>
+            <li>▹ ACL e Rate Limiting</li>
+            <li>▹ Melhoria de DevEx</li>
+            <li>▹ Automação de governança</li>
+          </ul>
+
+          <div className="mt-4 text-xs text-blue-400">
+            #DevOps #SRE #Infrastructure
+          </div>
+        </motion.div>
+
+        {/* PROJETO 3 */}
+        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3 className="text-xl font-bold mb-2">
+            Upgrade OpenShift (4.8 → 4.16)
+          </h3>
+
+          <ul className="text-gray-400 text-sm space-y-2">
+            <li>▹ Upgrade EUS sem downtime</li>
+            <li>▹ Validação RHSSO e RHPAM</li>
+            <li>▹ Troubleshooting OLM</li>
+            <li>▹ Garantia de disponibilidade</li>
+          </ul>
+
+          <div className="mt-4 text-xs text-blue-400">
+            #DevOps #SRE #Infrastructure
+          </div>
+        </motion.div>
+
+        {/* PROJETO 4 */}
+        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3 className="text-xl font-bold mb-2">
+            Ecossistema de Observabilidade
+          </h3>
+
+          <ul className="text-gray-400 text-sm space-y-2">
+            <li>▹ Dashboards Grafana (90 dias)</li>
+            <li>▹ Alertas inteligentes</li>
+            <li>▹ Monitoramento híbrido</li>
+            <li>▹ Redução de MTTR</li>
+          </ul>
+
+          <div className="mt-4 text-xs text-blue-400">
+            #DevOps #SRE #Infrastructure
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
