@@ -156,6 +156,43 @@ button:focus-visible {
   color: #94a3b8;
 }
 
+.experience-card,
+.credential-card,
+.credential-feature {
+  border: 1px solid #1e293b;
+  border-radius: 1rem;
+  background: rgba(8, 14, 29, 0.78);
+  padding: 1.5rem;
+}
+
+.experience-card {
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  transform: translateY(-2px);
+}
+
+.credential-feature {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(59, 130, 246, 0.28);
+  background: linear-gradient(140deg, rgba(15, 40, 92, 0.62), rgba(7, 15, 32, 0.94));
+}
+
+.credential-feature::after {
+  content: "CKA";
+  position: absolute;
+  right: -0.25rem;
+  bottom: -2.5rem;
+  color: rgba(96, 165, 250, 0.055);
+  font-size: 9rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  pointer-events: none;
+}
+
 .contact-panel {
   position: relative;
   overflow: hidden;
@@ -211,7 +248,10 @@ button:focus-visible {
 
 @media (min-width: 640px) {
   .terminal-card,
-  .case-card {
+  .case-card,
+  .experience-card,
+  .credential-card,
+  .credential-feature {
     padding: 2rem;
   }
 }

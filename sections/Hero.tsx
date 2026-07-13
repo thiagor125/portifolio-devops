@@ -24,13 +24,13 @@ export default function Hero() {
           Thiago Rodrigues
         </h1>
         <h2 className="mt-4 text-xl font-medium text-blue-400 sm:text-2xl">
-          DevOps Engineer &amp; SRE
+          DevOps &amp; Platform Engineer
         </h2>
 
         <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
           Especialista em <strong className="font-medium text-slate-200">OpenShift e Kubernetes</strong>,
-          com atuação em migrações, upgrades e modernização de plataformas onde disponibilidade,
-          segurança e continuidade de negócio não são negociáveis.
+          com base sólida em Linux/Unix e atuação na automação, sustentação e modernização de
+          plataformas híbridas onde disponibilidade, segurança e continuidade não são negociáveis.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="space-y-6 font-mono text-sm">
             <div>
               <p className="text-blue-400"><span className="text-slate-600">$</span> focus --primary</p>
-              <p className="mt-1.5 text-slate-200">critical-platforms &amp; business-continuity</p>
+              <p className="mt-1.5 text-slate-200">platform-engineering &amp; business-continuity</p>
             </div>
             <div>
               <p className="text-blue-400"><span className="text-slate-600">$</span> operating-principles</p>
@@ -88,7 +88,7 @@ export default function Hero() {
             </div>
             <div>
               <p className="text-blue-400"><span className="text-slate-600">$</span> core-stack</p>
-              <p className="mt-1.5 leading-7 text-emerald-300">OpenShift · Kubernetes · Ansible · Kong</p>
+              <p className="mt-1.5 leading-7 text-emerald-300">OpenShift · Kubernetes · Linux · Ansible</p>
             </div>
             <p className="text-blue-400"><span className="text-slate-600">$</span> <span className="animate-pulse">_</span></p>
           </div>

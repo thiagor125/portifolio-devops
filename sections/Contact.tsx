@@ -31,7 +31,7 @@ export default function Contact() {
             Vamos tornar a próxima mudança crítica mais previsível.
           </h2>
           <p className="mt-5 max-w-xl leading-7 text-slate-400">
-            Estou aberto a conversas sobre DevOps, SRE, OpenShift, Kubernetes e modernização de plataformas.
+            Estou aberto a conversas sobre DevOps, Platform Engineering, OpenShift, Kubernetes e modernização de plataformas.
           </p>
         </div>
 

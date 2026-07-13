@@ -5,11 +5,12 @@ const siteUrl = "https://portifolio-devops-phi.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Thiago Rodrigues | DevOps Engineer & SRE",
+  title: "Thiago Rodrigues | DevOps & Platform Engineer",
   description:
-    "DevOps Engineer e SRE especializado em OpenShift, Kubernetes, migrações de ambientes críticos, API Gateway e observabilidade.",
+    "DevOps e Platform Engineer especializado em OpenShift, Kubernetes, Linux, automação e confiabilidade de ambientes críticos.",
   keywords: [
     "DevOps Engineer",
+    "Platform Engineer",
     "SRE",
     "OpenShift",
     "Kubernetes",
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Thiago Rodrigues · DevOps & SRE",
-    title: "Thiago Rodrigues | DevOps Engineer & SRE",
+    siteName: "Thiago Rodrigues · DevOps & Platform Engineering",
+    title: "Thiago Rodrigues | DevOps & Platform Engineer",
     description:
       "OpenShift, Kubernetes e engenharia de confiabilidade para ambientes críticos.",
     images: [
@@ -32,13 +33,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Thiago Rodrigues — DevOps Engineer e SRE",
+        alt: "Thiago Rodrigues — DevOps e Platform Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thiago Rodrigues | DevOps Engineer & SRE",
+    title: "Thiago Rodrigues | DevOps & Platform Engineer",
     description:
       "OpenShift, Kubernetes e engenharia de confiabilidade para ambientes críticos.",
     images: ["/og.png"],

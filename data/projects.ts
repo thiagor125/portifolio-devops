@@ -61,4 +61,17 @@ export const projects: Project[] = [
       "Diagnóstico mais objetivo, melhor contexto para incidentes e base operacional para evolução contínua de confiabilidade.",
     technologies: ["Grafana", "Prometheus", "Zabbix", "Dynatrace", "Azure"],
   },
+  {
+    title: "Operação crítica e análise de causa raiz",
+    eyebrow: "SLA · Troubleshooting · RCA",
+    summary:
+      "Sustentação de aplicações e plataformas distribuídas com foco em estabilidade, diagnóstico e continuidade operacional.",
+    challenge:
+      "Investigar falhas que atravessam sistema operacional, middleware, aplicações e infraestrutura híbrida sem perder o contexto do impacto no negócio.",
+    approach:
+      "Correlação de logs, métricas e health checks; análise de causa raiz; validação de dependências e atuação integrada entre desenvolvimento e infraestrutura.",
+    outcome:
+      "Diagnósticos mais estruturados, recuperação operacional orientada a SLA e aprendizado reutilizável para prevenção de recorrências.",
+    technologies: ["Linux/Unix", "RCA", "Logs & Metrics", "SLA", "Azure"],
+  },
 ];

@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/sections/Hero";
 import Impact from "@/sections/Impact";
 import Projects from "@/sections/Projects";
+import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
+import Credentials from "@/sections/Credentials";
 import Testimonials from "@/sections/Testimonials";
 import Contact from "@/sections/Contact";
 
@@ -11,7 +13,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Thiago Rodrigues",
-    jobTitle: "DevOps Engineer & SRE",
+    jobTitle: "DevOps & Platform Engineer",
     url: "https://portifolio-devops-phi.vercel.app",
     sameAs: [
       "https://www.linkedin.com/in/thiago-rodrigues2025/",
@@ -20,8 +22,11 @@ export default function Home() {
     knowsAbout: [
       "OpenShift",
       "Kubernetes",
+      "Platform Engineering",
+      "Linux",
       "Site Reliability Engineering",
       "Kong Gateway",
+      "Middleware",
       "Observabilidade",
     ],
   };
@@ -41,7 +46,9 @@ export default function Home() {
         <Hero />
         <Impact />
         <Projects />
+        <Experience />
         <Skills />
+        <Credentials />
         <Testimonials />
         <Contact />
       </div>
