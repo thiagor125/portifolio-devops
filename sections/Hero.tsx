@@ -1,60 +1,99 @@
 "use client";
 
+import { ArrowDownRight, Code2, Network } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 gap-12 items-center mb-24 pt-20">
+    <section className="relative grid min-h-[calc(100vh-5rem)] items-center gap-14 py-16 md:grid-cols-[1.08fr_.92fr] md:py-24">
+      <div className="pointer-events-none absolute -left-52 top-10 h-96 w-96 rounded-full bg-blue-600/10 blur-[110px]" />
 
-      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-        <p className="text-blue-400 font-mono mb-2">Olá, eu sou</p>
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55 }}
+        className="relative"
+      >
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 font-mono text-xs text-emerald-300">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
+          Disponível para desafios em infraestrutura crítica
+        </div>
 
-        <h1 className="text-6xl font-bold mb-4 leading-tight text-white">
+        <p className="mb-3 font-mono text-sm text-blue-400">Olá, eu sou</p>
+        <h1 className="max-w-3xl text-5xl font-bold leading-[1.04] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
           Thiago Rodrigues
         </h1>
-
-        <h2 className="text-2xl text-blue-400 font-medium mb-4">
-          DevOps Engineer & SRE
+        <h2 className="mt-4 text-xl font-medium text-blue-400 sm:text-2xl">
+          DevOps Engineer &amp; SRE
         </h2>
 
-        <p className="text-slate-400 mb-8 leading-relaxed max-w-xl text-lg">
-          Engenheiro DevOps com atuação em ambientes críticos, especializado em 
-          <span className="text-blue-300"> Kubernetes</span> e <span className="text-blue-300"> OpenShift</span>. 
-          Experiência sólida em migrações de cluster em larga escala, arquitetura de API Gateway e continuidade de negócios em produção.
+        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+          Especialista em <strong className="font-medium text-slate-200">OpenShift e Kubernetes</strong>,
+          com atuação em migrações, upgrades e modernização de plataformas onde disponibilidade,
+          segurança e continuidade de negócio não são negociáveis.
         </p>
 
-        <div className="flex gap-4">
-          <a href="#projetos" className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-xl glow hover:bg-blue-500 hover:scale-105 transition-all">
-            Ver Cases Técnicos
+        <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <a href="#projetos" className="button-primary">
+            Explorar cases <ArrowDownRight size={18} aria-hidden="true" />
           </a>
-
-          <a href="https://www.linkedin.com/in/thiago-rodrigues2025/" target="_blank" className="border border-slate-700 text-slate-300 px-8 py-3 rounded-xl hover:border-blue-400 hover:text-blue-400 transition-all">
-            LinkedIn
+          <a
+            href="https://www.linkedin.com/in/thiago-rodrigues2025/"
+            target="_blank"
+            rel="noreferrer"
+            className="button-secondary"
+          >
+            <Network size={18} aria-hidden="true" /> LinkedIn
+          </a>
+          <a
+            href="https://github.com/thiagor125"
+            target="_blank"
+            rel="noreferrer"
+            className="button-secondary"
+          >
+            <Code2 size={18} aria-hidden="true" /> GitHub
           </a>
         </div>
       </motion.div>
 
-      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}>
-        <div className="bg-[#0b1120] p-7 rounded-2xl font-mono text-sm shadow-2xl border border-blue-900/30 relative">
-          <div className="flex gap-1.5 mb-4 opacity-50">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.96 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.55, delay: 0.1 }}
+        className="relative"
+      >
+        <div className="terminal-card">
+          <div className="mb-7 flex items-center justify-between border-b border-slate-800 pb-4">
+            <div className="flex gap-1.5 opacity-70" aria-hidden="true">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            </div>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-600">reliability.profile</span>
           </div>
-          
-          <p className="text-blue-400">$ whoami</p>
-          <p className="text-white mb-3">thiago-rodrigues</p>
-          
-          <p className="text-blue-400">$ uptime --env</p>
-          <p className="text-emerald-400 mb-3">99.9% | Mission Critical | High Availability</p>
-          
-          <p className="text-blue-400">$ main_stack --version</p>
-          <p className="text-slate-300">OpenShift 4.16 | K8s 1.30+ | Ansible 2.15 | Kong 3.x</p>
-          
-          <p className="text-blue-400 mt-3">$ <span className="animate-pulse">_</span></p>
+
+          <div className="space-y-6 font-mono text-sm">
+            <div>
+              <p className="text-blue-400"><span className="text-slate-600">$</span> focus --primary</p>
+              <p className="mt-1.5 text-slate-200">critical-platforms &amp; business-continuity</p>
+            </div>
+            <div>
+              <p className="text-blue-400"><span className="text-slate-600">$</span> operating-principles</p>
+              <div className="mt-2 grid grid-cols-2 gap-2 text-xs text-slate-300">
+                <span className="terminal-pill">plan &amp; rehearse</span>
+                <span className="terminal-pill">observe</span>
+                <span className="terminal-pill">safe rollback</span>
+                <span className="terminal-pill">automate</span>
+              </div>
+            </div>
+            <div>
+              <p className="text-blue-400"><span className="text-slate-600">$</span> core-stack</p>
+              <p className="mt-1.5 leading-7 text-emerald-300">OpenShift · Kubernetes · Ansible · Kong</p>
+            </div>
+            <p className="text-blue-400"><span className="text-slate-600">$</span> <span className="animate-pulse">_</span></p>
+          </div>
         </div>
       </motion.div>
-
     </section>
   );
 }

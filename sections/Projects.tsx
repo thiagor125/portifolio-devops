@@ -1,87 +1,58 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { projects } from "@/data/projects";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
   return (
-    <section id="projetos" className="mb-32">
-      <h2 className="text-3xl mb-8">Projetos e Cases Técnicos</h2>
+    <section id="projetos" aria-labelledby="projetos-title" className="section-block scroll-mt-24 py-24">
+      <div className="section-heading md:flex md:items-end md:justify-between">
+        <div>
+          <p className="section-kicker">Experiência aplicada</p>
+          <h2 id="projetos-title">Cases técnicos selecionados</h2>
+        </div>
+        <p className="mt-5 max-w-md text-sm leading-6 text-slate-500 md:mt-0 md:text-right">
+          Contextos corporativos apresentados de forma anonimizada para preservar informações sensíveis.
+        </p>
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="space-y-5">
+        {projects.map((project, index) => (
+          <article key={project.title} className="case-card group">
+            <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[.75fr_1.25fr]">
+              <div>
+                <div className="mb-5 flex items-center justify-between">
+                  <span className="font-mono text-xs text-blue-400">CASE 0{index + 1}</span>
+                  <ArrowUpRight className="text-slate-700 transition group-hover:text-blue-400" size={20} aria-hidden="true" />
+                </div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                  {project.eyebrow}
+                </p>
+                <h3 className="text-2xl font-semibold tracking-tight text-white">{project.title}</h3>
+                <p className="mt-4 leading-7 text-slate-400">{project.summary}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.technologies.map((technology) => (
+                    <span key={technology} className="tech-tag">{technology}</span>
+                  ))}
+                </div>
+              </div>
 
-        {/* PROJETO 1 */}
-        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-          <h3 className="text-xl font-bold mb-2">
-            Migração de Cluster (OpenShift Banking)
-          </h3>
-
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>▹ Migração de Deployments, Services e Secrets</li>
-            <li>▹ Gestão de volumes persistentes (PVs)</li>
-            <li>▹ Estratégia de Cutover com monitoramento</li>
-            <li>▹ Compliance e segurança bancária</li>
-          </ul>
-
-          <div className="mt-4 text-xs text-blue-400">
-            #DevOps #SRE #Infrastructure
-          </div>
-        </motion.div>
-
-        {/* PROJETO 2 */}
-        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-          <h3 className="text-xl font-bold mb-2">
-            Modernização Kong API Gateway
-          </h3>
-
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>▹ Interface para Services e Routes</li>
-            <li>▹ ACL e Rate Limiting</li>
-            <li>▹ Melhoria de DevEx</li>
-            <li>▹ Automação de governança</li>
-          </ul>
-
-          <div className="mt-4 text-xs text-blue-400">
-            #DevOps #SRE #Infrastructure
-          </div>
-        </motion.div>
-
-        {/* PROJETO 3 */}
-        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-          <h3 className="text-xl font-bold mb-2">
-            Upgrade OpenShift (4.8 → 4.16)
-          </h3>
-
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>▹ Upgrade EUS sem downtime</li>
-            <li>▹ Validação RHSSO e RHPAM</li>
-            <li>▹ Troubleshooting OLM</li>
-            <li>▹ Garantia de disponibilidade</li>
-          </ul>
-
-          <div className="mt-4 text-xs text-blue-400">
-            #DevOps #SRE #Infrastructure
-          </div>
-        </motion.div>
-
-        {/* PROJETO 4 */}
-        <motion.div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-          <h3 className="text-xl font-bold mb-2">
-            Ecossistema de Observabilidade
-          </h3>
-
-          <ul className="text-gray-400 text-sm space-y-2">
-            <li>▹ Dashboards Grafana (90 dias)</li>
-            <li>▹ Alertas inteligentes</li>
-            <li>▹ Monitoramento híbrido</li>
-            <li>▹ Redução de MTTR</li>
-          </ul>
-
-          <div className="mt-4 text-xs text-blue-400">
-            #DevOps #SRE #Infrastructure
-          </div>
-        </motion.div>
-
+              <div className="grid gap-5 sm:grid-cols-3">
+                <CaseDetail label="Desafio" text={project.challenge} />
+                <CaseDetail label="Atuação" text={project.approach} />
+                <CaseDetail label="Resultado" text={project.outcome} />
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
+  );
+}
+
+function CaseDetail({ label, text }: { label: string; text: string }) {
+  return (
+    <div className="border-l border-slate-800 pl-4">
+      <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.16em] text-blue-400">{label}</p>
+      <p className="text-sm leading-6 text-slate-400">{text}</p>
+    </div>
   );
 }
