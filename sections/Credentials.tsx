@@ -20,11 +20,11 @@ export default function Credentials() {
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500 text-white">
             <Award size={24} aria-hidden="true" />
           </div>
-          <p className="mt-8 font-mono text-xs uppercase tracking-[0.18em] text-blue-300">Certificação profissional</p>
-          <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white">Certified Kubernetes Administrator</h3>
-          <p className="mt-2 text-lg text-blue-300">CKA</p>
+          <p className="mt-8 font-mono text-xs uppercase tracking-[0.18em] text-blue-300">Formação Kubernetes</p>
+          <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white">Curso preparatório CKA</h3>
+          <p className="mt-2 text-lg text-blue-300">Kubernetes Administration</p>
           <p className="mt-5 max-w-xl leading-7 text-slate-400">
-            Validação prática de competências em administração, troubleshooting e operação de clusters Kubernetes.
+            Formação voltada à administração, troubleshooting e operação de clusters Kubernetes.
           </p>
         </article>
 

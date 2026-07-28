@@ -14,9 +14,9 @@ const proofPoints = [
     icon: Boxes,
   },
   {
-    value: "CKA",
-    label: "Certificação Kubernetes",
-    context: "Administração e troubleshooting prático de clusters",
+    value: "K8s",
+    label: "Formação Kubernetes",
+    context: "Curso preparatório CKA e prática em administração de clusters",
     icon: Award,
   },
   {
@@ -38,7 +38,7 @@ export default function Proof() {
           </h2>
         </div>
         <p className="max-w-md text-sm leading-6 text-slate-500 sm:text-right">
-          Experiência prática, certificação e entregas conectadas à operação real.
+          Experiência prática, formação técnica e entregas conectadas à operação real.
         </p>
       </div>
 

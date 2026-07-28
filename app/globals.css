@@ -196,7 +196,7 @@ button:focus-visible {
 }
 
 .credential-feature::after {
-  content: "CKA";
+  content: "K8S";
   position: absolute;
   right: -0.25rem;
   bottom: -2.5rem;
