@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/sections/Hero";
+import Proof from "@/sections/Proof";
 import Impact from "@/sections/Impact";
 import Projects from "@/sections/Projects";
 import Experience from "@/sections/Experience";
@@ -12,7 +13,7 @@ export default function Home() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Thiago Rodrigues",
+    name: "Thiago Rodrigues Oliveira",
     jobTitle: "DevOps & Platform Engineer",
     url: "https://portifolio-devops-phi.vercel.app",
     sameAs: [
@@ -44,6 +45,7 @@ export default function Home() {
 
       <div id="conteudo" className="mx-auto max-w-7xl px-5 pt-20 sm:px-8 lg:px-10">
         <Hero />
+        <Proof />
         <Impact />
         <Projects />
         <Experience />
