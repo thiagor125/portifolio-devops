@@ -1,7 +1,14 @@
 "use client";
 
-import { ArrowDownRight, Code2, Network } from "lucide-react";
+import { ArrowDownRight, Code2, Network, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+
+const focusAreas = [
+  { label: "Plataformas", value: "Kubernetes & OpenShift" },
+  { label: "Infraestrutura", value: "Terraform & Ansible" },
+  { label: "Confiabilidade", value: "Observabilidade & SRE" },
+  { label: "Integração", value: "Kong & CI/CD" },
+];
 
 export default function Hero() {
   return (
@@ -16,26 +23,23 @@ export default function Hero() {
       >
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 font-mono text-xs text-emerald-300">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
-          Disponível para desafios em infraestrutura crítica
+          DevOps · Platform Engineering · SRE
         </div>
 
-        <p className="mb-3 font-mono text-sm text-blue-400">Olá, eu sou</p>
+        <p className="mb-3 font-mono text-sm text-blue-400">Olá, eu sou Thiago Rodrigues</p>
         <h1 className="max-w-3xl text-5xl font-bold leading-[1.04] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-          Thiago Rodrigues
+          Transformo infraestrutura crítica em plataformas mais previsíveis.
         </h1>
-        <h2 className="mt-4 text-xl font-medium text-blue-400 sm:text-2xl">
-          DevOps &amp; Platform Engineer
-        </h2>
 
         <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-          Especialista em <strong className="font-medium text-slate-200">OpenShift e Kubernetes</strong>,
-          com base sólida em Linux/Unix e atuação na automação, sustentação e modernização de
-          plataformas híbridas onde disponibilidade, segurança e continuidade não são negociáveis.
+          DevOps &amp; Platform Engineer com atuação em <strong className="font-medium text-slate-200">Kubernetes,
+          OpenShift, automação e observabilidade</strong>. Experiência em migrações, upgrades, API Gateway,
+          troubleshooting e operação de ambientes onde disponibilidade e segurança são essenciais.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a href="#projetos" className="button-primary">
-            Explorar cases <ArrowDownRight size={18} aria-hidden="true" />
+            Ver projetos em destaque <ArrowDownRight size={18} aria-hidden="true" />
           </a>
           <a
             href="https://www.linkedin.com/in/thiago-rodrigues2025/"
@@ -64,33 +68,25 @@ export default function Hero() {
       >
         <div className="terminal-card">
           <div className="mb-7 flex items-center justify-between border-b border-slate-800 pb-4">
-            <div className="flex gap-1.5 opacity-70" aria-hidden="true">
-              <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
-              <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            <div className="flex items-center gap-2 text-emerald-300">
+              <ShieldCheck size={17} aria-hidden="true" />
+              <span className="font-mono text-xs">recruiter.summary</span>
             </div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-600">reliability.profile</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-600">visão rápida</span>
           </div>
 
-          <div className="space-y-6 font-mono text-sm">
-            <div>
-              <p className="text-blue-400"><span className="text-slate-600">$</span> focus --primary</p>
-              <p className="mt-1.5 text-slate-200">platform-engineering &amp; business-continuity</p>
-            </div>
-            <div>
-              <p className="text-blue-400"><span className="text-slate-600">$</span> operating-principles</p>
-              <div className="mt-2 grid grid-cols-2 gap-2 text-xs text-slate-300">
-                <span className="terminal-pill">plan &amp; rehearse</span>
-                <span className="terminal-pill">observe</span>
-                <span className="terminal-pill">safe rollback</span>
-                <span className="terminal-pill">automate</span>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {focusAreas.map((area) => (
+              <div key={area.label} className="terminal-pill min-h-24 p-4">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-blue-400">{area.label}</p>
+                <p className="mt-3 text-sm font-semibold leading-6 text-slate-100">{area.value}</p>
               </div>
-            </div>
-            <div>
-              <p className="text-blue-400"><span className="text-slate-600">$</span> core-stack</p>
-              <p className="mt-1.5 leading-7 text-emerald-300">OpenShift · Kubernetes · Linux · Ansible</p>
-            </div>
-            <p className="text-blue-400"><span className="text-slate-600">$</span> <span className="animate-pulse">_</span></p>
+            ))}
+          </div>
+
+          <div className="mt-6 border-t border-slate-800 pt-5 font-mono text-xs leading-6 text-slate-400">
+            <p><span className="text-blue-400">$</span> objetivo</p>
+            <p className="text-emerald-300">reduzir risco · automatizar operação · aumentar visibilidade</p>
           </div>
         </div>
       </motion.div>
