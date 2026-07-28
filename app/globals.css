@@ -140,6 +140,20 @@ button:focus-visible {
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
+.proof-card {
+  border: 1px solid #1e293b;
+  border-radius: 1rem;
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.58), rgba(8, 14, 29, 0.82));
+  padding: 1.4rem;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.proof-card:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  transform: translateY(-2px);
+}
+
 .case-card:hover {
   border-color: rgba(59, 130, 246, 0.45);
   background: rgba(11, 18, 36, 0.96);
