@@ -2,31 +2,36 @@ import { Gauge, RefreshCcw, ShieldCheck } from "lucide-react";
 
 const impacts = [
   {
-    title: "Mudanças com risco controlado",
+    title: "Plataformas resilientes",
     description:
-      "Planejamento, ensaios, critérios de validação e rollback para migrações e upgrades em produção.",
+      "Administração, migração e evolução de clusters Kubernetes e OpenShift com validação técnica, rollback e foco em continuidade.",
     icon: ShieldCheck,
   },
   {
-    title: "Confiabilidade observável",
+    title: "Automação reproduzível",
     description:
-      "Sinais técnicos transformados em contexto acionável para detectar, diagnosticar e responder melhor.",
-    icon: Gauge,
+      "Terraform, Ansible, pipelines e práticas declarativas para reduzir tarefas manuais, variação e risco operacional.",
+    icon: RefreshCcw,
   },
   {
-    title: "Operação reproduzível",
+    title: "Operação observável",
     description:
-      "Automação e práticas declarativas para reduzir tarefas manuais, variação e dependência de conhecimento tácito.",
-    icon: RefreshCcw,
+      "Métricas, logs, dashboards e alertas com contexto para acelerar diagnósticos e apoiar decisões de capacidade e confiabilidade.",
+    icon: Gauge,
   },
 ];
 
 export default function Impact() {
   return (
     <section aria-labelledby="impacto-title" className="section-block border-y border-slate-900 py-20">
-      <div className="section-heading">
-        <p className="section-kicker">Como eu trabalho</p>
-        <h2 id="impacto-title">Engenharia orientada a continuidade</h2>
+      <div className="section-heading md:flex md:items-end md:justify-between">
+        <div>
+          <p className="section-kicker">Proposta de valor</p>
+          <h2 id="impacto-title">Da infraestrutura ao resultado operacional</h2>
+        </div>
+        <p className="mt-5 max-w-md text-sm leading-6 text-slate-500 md:mt-0 md:text-right">
+          Engenharia aplicada para tornar mudanças críticas mais seguras, repetíveis e fáceis de observar.
+        </p>
       </div>
 
       <div className="grid gap-px overflow-hidden rounded-2xl border border-slate-800 bg-slate-800 md:grid-cols-3">
