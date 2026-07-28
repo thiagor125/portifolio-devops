@@ -5,17 +5,19 @@ const siteUrl = "https://portifolio-devops-phi.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Thiago Rodrigues | DevOps & Platform Engineer",
+  title: "Thiago Rodrigues | DevOps, Kubernetes & OpenShift",
   description:
-    "DevOps e Platform Engineer especializado em OpenShift, Kubernetes, Linux, automação e confiabilidade de ambientes críticos.",
+    "Portfólio de Thiago Rodrigues, DevOps e Platform Engineer com projetos em Kubernetes, OpenShift, Terraform, automação, observabilidade e ambientes críticos.",
   keywords: [
     "DevOps Engineer",
     "Platform Engineer",
     "SRE",
     "OpenShift",
     "Kubernetes",
-    "Kong Gateway",
+    "Terraform",
+    "Ansible",
     "Observabilidade",
+    "Kong Gateway",
   ],
   authors: [{ name: "Thiago Rodrigues" }],
   creator: "Thiago Rodrigues",
@@ -25,9 +27,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Thiago Rodrigues · DevOps & Platform Engineering",
-    title: "Thiago Rodrigues | DevOps & Platform Engineer",
+    title: "Thiago Rodrigues | DevOps, Kubernetes & OpenShift",
     description:
-      "OpenShift, Kubernetes e engenharia de confiabilidade para ambientes críticos.",
+      "Projetos de plataforma, infraestrutura como código, automação e confiabilidade para ambientes críticos.",
     images: [
       {
         url: "/og.png",
@@ -39,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thiago Rodrigues | DevOps & Platform Engineer",
+    title: "Thiago Rodrigues | DevOps, Kubernetes & OpenShift",
     description:
-      "OpenShift, Kubernetes e engenharia de confiabilidade para ambientes críticos.",
+      "Projetos de plataforma, infraestrutura como código, automação e confiabilidade para ambientes críticos.",
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },
