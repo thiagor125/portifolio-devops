@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDownRight, Code2, Download, Network, ShieldCheck } from "lucide-react";
+import { ArrowDownRight, Code2, Network, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const focusAreas = [
@@ -40,13 +40,6 @@ export default function Hero() {
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a href="#projetos" className="button-primary">
             Ver projetos em destaque <ArrowDownRight size={18} aria-hidden="true" />
-          </a>
-          <a
-            href="/Thiago_Rodrigues_2026.pdf"
-            download
-            className="button-secondary"
-          >
-            <Download size={18} aria-hidden="true" /> Baixar currículo
           </a>
           <a
             href="https://www.linkedin.com/in/thiago-rodrigues2025/"
