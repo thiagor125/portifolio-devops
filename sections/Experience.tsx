@@ -2,27 +2,27 @@ import { Building2, ServerCog } from "lucide-react";
 
 const experiences = [
   {
-    company: "TREND",
-    role: "DevOps Engineer",
+    company: "ServiceIt · Janeiro de 2022 a junho de 2026",
+    role: "Analista de Suporte Unix / Middleware · DevOps Engineer",
     description:
-      "Administração e sustentação de clusters Kubernetes/OpenShift, pipelines CI/CD, observabilidade e segurança de acesso em ambientes produtivos.",
+      "Sustentação de ambientes críticos Linux, Kubernetes e OpenShift, combinando operação, automação, observabilidade, middleware e resposta a incidentes.",
     highlights: [
-      "Aplicações containerizadas com Docker e Podman",
-      "Dashboards, métricas, logs e health checks",
-      "RBAC, credenciais e políticas de acesso",
-      "Troubleshooting distribuído e análise de causa raiz",
+      "Publicação e sustentação de mais de 100 APIs no Kong Gateway",
+      "Pipelines com Azure DevOps, Jenkins, GitLab CI e GitHub Actions",
+      "Dashboards e alertas com Prometheus, Grafana e Zabbix",
+      "Troubleshooting e análise de causa raiz em produção",
     ],
   },
   {
-    company: "ServiceIt",
-    role: "Analista de Suporte Unix / Middleware",
+    company: "Projeto TREND · Agosto de 2024 a fevereiro de 2026",
+    role: "DevOps Engineer",
     description:
-      "Sustentação de ambientes Linux/Unix críticos, plataformas cloud-native, middleware corporativo e aplicações orientadas a SLA.",
+      "Atuação dedicada à administração de clusters, padronização operacional, pipelines, controles de acesso e continuidade de serviços.",
     highlights: [
-      "Kubernetes, OpenShift, Docker e Podman",
-      "Kong Gateway, WSO2 API Manager e WebLogic",
-      "Prometheus, Grafana e Zabbix",
-      "Azure, PostgreSQL, Shell Script e Python",
+      "Administração de clusters Kubernetes e OpenShift em produção",
+      "Deploys e acompanhamento de workloads com Docker e Podman",
+      "RBAC, credenciais e controles básicos de segurança",
+      "Migrações entre clusters planejadas para evitar indisponibilidade",
     ],
   },
 ];
@@ -47,7 +47,7 @@ export default function Experience() {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 text-blue-400">
                 {index === 0 ? <ServerCog size={22} aria-hidden="true" /> : <Building2 size={22} aria-hidden="true" />}
               </div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-600">experiência</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-600">experiência comprovada</span>
             </div>
             <p className="mt-7 font-mono text-xs uppercase tracking-[0.18em] text-blue-400">{experience.company}</p>
             <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white">{experience.role}</h3>
