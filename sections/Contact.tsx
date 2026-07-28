@@ -3,8 +3,8 @@ import { ArrowUpRight, Code2, Mail, Network } from "lucide-react";
 const contacts = [
   {
     label: "Email",
-    value: "techsolutions.tag@gmail.com",
-    href: "mailto:techsolutions.tag@gmail.com",
+    value: "thiagor402@gmail.com",
+    href: "mailto:thiagor402@gmail.com",
     icon: Mail,
   },
   {
