@@ -10,6 +10,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Infraestrutura Kubernetes com Terraform",
+    eyebrow: "Infrastructure as Code · Automação",
+    summary:
+      "Projeto de provisionamento declarativo para transformar a criação de infraestrutura Kubernetes em um processo versionado, repetível e auditável.",
+    challenge:
+      "Evitar configurações manuais, divergências entre ambientes e dependência de conhecimento operacional concentrado.",
+    approach:
+      "Organização modular do Terraform, separação de variáveis por ambiente, versionamento no Git e validações antes da aplicação das mudanças.",
+    outcome:
+      "Base reutilizável para provisionamento consistente, revisão segura de mudanças e evolução controlada da infraestrutura.",
+    technologies: ["Terraform", "Kubernetes", "Git", "IaC", "Automação"],
+  },
+  {
     title: "Migração de workloads críticos",
     eyebrow: "OpenShift · Ambiente bancário",
     summary:
@@ -21,19 +34,6 @@ export const projects: Project[] = [
     outcome:
       "Execução previsível, com validação técnica ponta a ponta e redução do risco durante a mudança de ambiente.",
     technologies: ["OpenShift", "Kubernetes", "PVs", "Network Policies"],
-  },
-  {
-    title: "Modernização do Kong API Gateway",
-    eyebrow: "Governança de APIs · Developer Experience",
-    summary:
-      "Camada de gestão para tornar a configuração de serviços, rotas e políticas mais segura, rastreável e acessível aos times.",
-    challenge:
-      "Reduzir operações manuais e padronizar controles de tráfego sem retirar a autonomia das equipes de desenvolvimento.",
-    approach:
-      "Centralização de Services e Routes, aplicação de ACL e Rate Limiting e automação do ciclo de vida das configurações por pipelines declarativos.",
-    outcome:
-      "Governança consistente, menor dependência de intervenções via CLI e uma experiência operacional mais simples para os times consumidores.",
-    technologies: ["Kong Gateway", "ACL", "Rate Limiting", "CI/CD"],
   },
   {
     title: "Upgrade OpenShift 4.8 → 4.16",
@@ -62,16 +62,16 @@ export const projects: Project[] = [
     technologies: ["Grafana", "Prometheus", "Zabbix", "Dynatrace", "Azure"],
   },
   {
-    title: "Operação crítica e análise de causa raiz",
-    eyebrow: "SLA · Troubleshooting · RCA",
+    title: "Modernização do Kong API Gateway",
+    eyebrow: "Governança de APIs · Developer Experience",
     summary:
-      "Sustentação de aplicações e plataformas distribuídas com foco em estabilidade, diagnóstico e continuidade operacional.",
+      "Camada de gestão para tornar a configuração de serviços, rotas e políticas mais segura, rastreável e acessível aos times.",
     challenge:
-      "Investigar falhas que atravessam sistema operacional, middleware, aplicações e infraestrutura híbrida sem perder o contexto do impacto no negócio.",
+      "Reduzir operações manuais e padronizar controles de tráfego sem retirar a autonomia das equipes de desenvolvimento.",
     approach:
-      "Correlação de logs, métricas e health checks; análise de causa raiz; validação de dependências e atuação integrada entre desenvolvimento e infraestrutura.",
+      "Centralização de Services e Routes, aplicação de ACL e Rate Limiting e automação do ciclo de vida das configurações por pipelines declarativos.",
     outcome:
-      "Diagnósticos mais estruturados, recuperação operacional orientada a SLA e aprendizado reutilizável para prevenção de recorrências.",
-    technologies: ["Linux/Unix", "RCA", "Logs & Metrics", "SLA", "Azure"],
+      "Governança consistente, menor dependência de intervenções via CLI e uma experiência operacional mais simples para os times consumidores.",
+    technologies: ["Kong Gateway", "ACL", "Rate Limiting", "CI/CD"],
   },
 ];
